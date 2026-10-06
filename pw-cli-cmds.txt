@@ -1,0 +1,42 @@
+
+playwright-cli open https://testcurrent.connexus.com --headed
+playwright-cli screenshot
+playwright-cli type "autotestPortal"
+playwright-cli click Next
+# take a screenshot (rarely used, as snapshot is more common)
+playwright-cli screenshot
+playwright-cli close
+
+
+
+
+playwright-cli dblclick e7
+# --submit presses Enter after filling the element
+playwright-cli fill e5 "user@example.com"  --submit
+playwright-cli drag e2 e8
+# drop files or data onto an element (from outside the page)
+playwright-cli drop e4 --path=./image.png
+playwright-cli drop e4 --data="text/plain=hello world"
+playwright-cli hover e4
+playwright-cli select e9 "option-value"
+playwright-cli upload ./document.pdf
+playwright-cli check e12
+playwright-cli uncheck e12
+playwright-cli snapshot
+# search the snapshot for text or a regexp, returns matching nodes with surrounding context
+playwright-cli find "Sign in"
+playwright-cli find --regex "Sign (in|up)"
+# wrap the regexp in slashes to add flags, e.g. /i for case-insensitive
+playwright-cli find --regex "/sign (in|up)/i"
+# save results to a file when a query produces too many matches
+playwright-cli find "Add" --filename=results.md
+playwright-cli eval "document.title"
+playwright-cli eval "el => el.textContent" e5
+# get element id, class, or any attribute not visible in the snapshot
+playwright-cli eval "el => el.id" e5
+playwright-cli eval "el => el.getAttribute('data-testid')" e5
+playwright-cli dialog-accept
+playwright-cli dialog-accept "confirmation text"
+playwright-cli dialog-dismiss
+playwright-cli resize 1920 1080
+playwright-cli close

@@ -1,0 +1,28 @@
+{
+  "name": "agentic-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "codegen": "npx playwright codegen https://testcurrent.connexus.com",
+    "app": "npx playwright test --headed",
+    "debug": "npx playwright test order.spec.ts --debug",
+    "ui-debug": "npx playwright test --ui",
+    "report": "npx playwright show-report",
+    "update-browsers": "npx playwright install",
+    "update": "npm install -D @playwright/test@latest && npx playwright install --with-deps",
+    "allure": "allure generate ./allure-results -o ./allure-report --clean && allure open ./allure-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^25.9.1"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.5",
+    "envalid": "^8.2.0"
+  }
+}

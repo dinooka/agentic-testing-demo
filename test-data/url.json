@@ -1,4 +1,4 @@
 {
-  "loginPageUrl": "https://testcurrent.connexus.com",
-  "homePageUrl": "https://testcurrent.connexus.com/home/pages/employee.aspx"
+  "loginPageUrl": "https://testcurrent.connexus.com/",
+  "homePageUrl": "home/pages/employee.aspx"
 }

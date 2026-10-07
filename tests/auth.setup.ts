@@ -5,7 +5,7 @@ const userDataFile = ".auth/session-data.json";
 const homePageTitle = 'Employee Home Page';
 
 
-setup("Employee login as admin", async ({ browser }) => {
+setup("Employee login as Admin", async ({ browser }) => {
 	const context = await browser.newContext({
 		permissions: []
 	});
